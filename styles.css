@@ -937,10 +937,54 @@ section {
   text-align: center;
 }
 
-.pdf-fallback-text {
-  font-size: 1.1rem;
-  color: var(--text-muted);
+/* Mobile Resume Preview Card */
+.mobile-resume-card {
+  display: none;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-card);
   margin-bottom: 1.5rem;
+}
+
+.mobile-resume-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.mobile-resume-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mobile-resume-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.mobile-resume-sub {
+  font-size: 0.8125rem;
+  color: var(--text-subtle);
+  margin-top: 0.2rem;
+}
+
+.mobile-resume-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -1169,7 +1213,7 @@ section {
 }
 
 /* --------------------------------------------------------------------------
-   16. Responsive Media Queries
+   16. Responsive Media Queries & Mobile Optimizations
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .hero-grid,
@@ -1205,6 +1249,15 @@ section {
     padding: 3.5rem 0;
   }
 
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
+
   .section-title {
     font-size: 1.85rem;
   }
@@ -1217,7 +1270,7 @@ section {
     font-size: 1.15rem;
   }
 
-  /* Mobile Nav Drawer */
+  /* Mobile Nav Drawer Glassmorphism */
   .mobile-toggle {
     display: block;
   }
@@ -1227,28 +1280,111 @@ section {
     top: var(--header-height);
     left: 0;
     right: 0;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-light);
     flex-direction: column;
-    padding: 1.5rem 2rem;
+    padding: 1.75rem 2rem;
     gap: 1.25rem;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-hover);
     clip-path: circle(0% at 100% 0);
-    transition: clip-path 0.35s ease-in-out;
+    transition: clip-path 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .nav-menu.active {
     clip-path: circle(140% at 100% 0);
   }
 
+  /* Mobile Grid Transformations: Multi-column 2x2 layout instead of 1 vertical block */
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .contact-card {
+    padding: 1.25rem 0.85rem;
+  }
+
+  .contact-icon-box {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0.65rem;
+  }
+
+  .contact-label {
+    font-size: 0.75rem;
+  }
+
+  .contact-val {
+    font-size: 0.85rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-category-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .skill-category-title {
+    font-size: 0.98rem;
+  }
+
+  .skill-pill {
+    font-size: 0.8125rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .cert-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .cert-title {
+    font-size: 0.95rem;
+  }
+
+  .cert-org {
+    font-size: 0.8125rem;
+  }
+
+  .hero-profile-card {
+    max-width: 320px;
+  }
+
+  .hero-photo {
+    height: 350px;
+  }
+
   .floating-badge {
-    top: -10px;
-    right: 0;
-    padding: 0.4rem 0.6rem;
+    top: -12px;
+    right: -5px;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .floating-badge-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Resume section mobile display */
+  .resume-actions-header {
+    display: none;
+  }
+
+  .mobile-resume-card {
+    display: block;
   }
 
   .pdf-viewer-card {
-    height: 500px;
+    display: none;
   }
 }
 
@@ -1258,12 +1394,32 @@ section {
   }
 
   .hero-actions {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
     width: 100%;
+    justify-content: center;
   }
 
-  .hero-actions .btn {
-    width: 100%;
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    flex: 1 1 calc(50% - 0.3rem);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
   }
 
   .timeline-header {
@@ -1276,10 +1432,14 @@ section {
   }
 
   .timeline-item {
-    padding-left: 35px;
+    padding-left: 32px;
   }
 
   .timeline-dot {
     left: 2px;
+  }
+
+  .timeline-card {
+    padding: 1.25rem 1rem;
   }
 }

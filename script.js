@@ -43,6 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navMenu.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 
   // 4. Scroll Active Navigation Link Highlighting (IntersectionObserver)
