@@ -902,10 +902,231 @@ section {
 }
 
 .resume-actions-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   display: flex;
   gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Resume Tab Switcher */
+.resume-tab-switcher {
+  display: flex;
+  background-color: var(--surface-card, #f8fafc);
+  padding: 0.35rem;
+  border-radius: 50px;
+  border: 1px solid var(--border-card, #e2e8f0);
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+}
+
+.resume-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: 50px;
+  border: none;
+  background: transparent;
+  color: var(--text-subtle, #64748b);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.resume-tab-btn:hover {
+  color: var(--primary, #2563eb);
+}
+
+.resume-tab-btn.active {
+  background-color: var(--primary, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.resume-tab-btn i {
+  width: 18px;
+  height: 18px;
+}
+
+/* Interactive Resume Paper Card */
+.resume-paper-card {
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-card);
+  padding: 3rem;
+  text-align: left;
+}
+
+.resume-paper-header {
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.resume-paper-name {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.resume-paper-role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+}
+
+.resume-paper-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-subtle);
+}
+
+.resume-paper-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.resume-paper-meta-item i {
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+}
+
+.resume-paper-meta-item a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resume-paper-meta-item a:hover {
+  text-decoration: underline;
+}
+
+.resume-paper-section {
+  margin-bottom: 2rem;
+}
+
+.resume-paper-section-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.resume-paper-section-title i {
+  color: var(--primary);
+  width: 20px;
+  height: 20px;
+}
+
+.resume-paper-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.resume-paper-entry {
+  margin-bottom: 1.25rem;
+}
+
+.resume-paper-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.resume-paper-entry-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.resume-paper-entry-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  background-color: var(--primary-light);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+
+.resume-paper-entry-sub {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-subtle);
+  margin-bottom: 0.5rem;
+}
+
+.resume-paper-entry-list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.resume-paper-entry-list li {
+  margin-bottom: 0.4rem;
+}
+
+.resume-paper-entry-list a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.resume-paper-entry-list a:hover {
+  text-decoration: underline;
+}
+
+.resume-skills-group {
+  margin-bottom: 1rem;
+}
+
+.resume-skills-group-title {
+  font-weight: 700;
+  font-size: 0.925rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.resume-skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.resume-skill-badge {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background-color: var(--surface-card, #f8fafc);
+  color: var(--text-main);
+  border: 1px solid var(--border-card);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
 }
 
 .pdf-viewer-card {

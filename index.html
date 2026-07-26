@@ -88,7 +88,7 @@
             </p>
 
             <div class="hero-actions">
-              <a href="ROHAN SINGH RESUME.pdf?v=3" download="ROHAN SINGH RESUME.pdf" class="btn btn-primary">
+              <a href="ROHAN%20SINGH%20RESUME.pdf" download="ROHAN_SINGH_RESUME.pdf" class="btn btn-primary">
                 <i data-feather="download"></i> Download Resume
               </a>
               <a href="#resume" class="btn btn-secondary">
@@ -473,42 +473,164 @@
 
         <div class="resume-container">
           <div class="resume-actions-header">
-            <a href="ROHAN SINGH RESUME.pdf?v=3" download="ROHAN_SINGH_RESUME.pdf" class="btn btn-primary">
+            <a href="ROHAN%20SINGH%20RESUME.pdf" download="ROHAN_SINGH_RESUME.pdf" class="btn btn-primary">
               <i data-feather="download"></i> Download Resume PDF
             </a>
-            <a href="ROHAN SINGH RESUME.pdf?v=3" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <a href="ROHAN%20SINGH%20RESUME.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
               <i data-feather="external-link"></i> Open PDF in New Tab
             </a>
           </div>
 
-          <!-- Mobile Optimized Interactive Resume Card (Visible on mobile/tablets) -->
-          <div class="mobile-resume-card">
-            <div class="mobile-resume-header">
-              <div class="mobile-resume-icon">
-                <i data-feather="file-text"></i>
-              </div>
-              <div class="mobile-resume-info">
-                <h3 class="mobile-resume-title">ROHAN SINGH RESUME.pdf</h3>
-                <p class="mobile-resume-sub">BTech Computer Science & Engineering • Updated 2026</p>
+          <!-- View Switcher Tabs -->
+          <div class="resume-tab-switcher">
+            <button class="resume-tab-btn active" id="tabInteractiveBtn" onclick="switchResumeTab('interactive')">
+              <i data-feather="layout"></i> Interactive View
+            </button>
+            <button class="resume-tab-btn" id="tabPdfBtn" onclick="switchResumeTab('pdf')">
+              <i data-feather="file-text"></i> PDF Viewer
+            </button>
+          </div>
+
+          <!-- Interactive Resume Paper Card (Always visible & crisp on all screens/browsers) -->
+          <div id="resumeInteractiveTab" class="resume-paper-card">
+            <!-- Header -->
+            <div class="resume-paper-header">
+              <h1 class="resume-paper-name">ROHAN SINGH</h1>
+              <p class="resume-paper-role">Computer Science Engineering Student | Aspiring Software Engineer</p>
+              <div class="resume-paper-meta">
+                <span class="resume-paper-meta-item"><i data-feather="phone"></i> +91 9821962437</span>
+                <span class="resume-paper-meta-item"><i data-feather="mail"></i> rohan.singh01006@gmail.com</span>
+                <span class="resume-paper-meta-item"><i data-feather="map-pin"></i> Greater Noida, U.P</span>
+                <span class="resume-paper-meta-item">
+                  <i data-feather="linkedin"></i> <a href="https://in.linkedin.com/in/connect-rohan-singh" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+                </span>
+                <span class="resume-paper-meta-item">
+                  <i data-feather="github"></i> <a href="https://github.com/Connect-Rohan" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                </span>
               </div>
             </div>
-            <div class="mobile-resume-actions">
-              <a href="ROHAN SINGH RESUME.pdf?v=3" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                <i data-feather="eye"></i> View Resume
-              </a>
-              <a href="ROHAN SINGH RESUME.pdf?v=3" download="ROHAN_SINGH_RESUME.pdf" class="btn btn-secondary">
-                <i data-feather="download"></i> Download
-              </a>
+
+            <!-- Professional Summary -->
+            <div class="resume-paper-section">
+              <h2 class="resume-paper-section-title"><i data-feather="user"></i> Summary</h2>
+              <p class="resume-paper-text">
+                Computer Science and Engineering student with a strong foundation in software development, programming, and core computer science concepts. Passionate about Artificial Intelligence and Software Engineering, seeking opportunities to apply technical skills and contribute to innovative IT solutions.
+              </p>
+            </div>
+
+            <!-- Education -->
+            <div class="resume-paper-section">
+              <h2 class="resume-paper-section-title"><i data-feather="book-open"></i> Education</h2>
+              
+              <div class="resume-paper-entry">
+                <div class="resume-paper-entry-header">
+                  <span class="resume-paper-entry-title">Bachelor of Technology (BTech) in Computer Science & Engineering</span>
+                  <span class="resume-paper-entry-date">2024 - Present</span>
+                </div>
+                <div class="resume-paper-entry-sub">Greater Noida Institute of Technology (GNIOT) • Greater Noida, U.P</div>
+              </div>
+
+              <div class="resume-paper-entry">
+                <div class="resume-paper-entry-header">
+                  <span class="resume-paper-entry-title">Secondary School (Class XII)</span>
+                  <span class="resume-paper-entry-date">04/2023 - 04/2024</span>
+                </div>
+                <div class="resume-paper-entry-sub">CBSE Board</div>
+              </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="resume-paper-section">
+              <h2 class="resume-paper-section-title"><i data-feather="code"></i> Skills</h2>
+              
+              <div class="resume-skills-group">
+                <div class="resume-skills-group-title">Programming Languages</div>
+                <div class="resume-skills-badges">
+                  <span class="resume-skill-badge">Python</span>
+                  <span class="resume-skill-badge">C</span>
+                  <span class="resume-skill-badge">C++</span>
+                  <span class="resume-skill-badge">Java</span>
+                </div>
+              </div>
+
+              <div class="resume-skills-group">
+                <div class="resume-skills-group-title">Core CS Concepts</div>
+                <div class="resume-skills-badges">
+                  <span class="resume-skill-badge">Data Structures & Algorithms (DSA)</span>
+                  <span class="resume-skill-badge">Object-Oriented Programming (OOP)</span>
+                  <span class="resume-skill-badge">Artificial Intelligence & Machine Learning</span>
+                  <span class="resume-skill-badge">Data Science</span>
+                </div>
+              </div>
+
+              <div class="resume-skills-group">
+                <div class="resume-skills-group-title">Tools & Platforms</div>
+                <div class="resume-skills-badges">
+                  <span class="resume-skill-badge">Git & GitHub</span>
+                  <span class="resume-skill-badge">Visual Studio Code</span>
+                  <span class="resume-skill-badge">MS Excel</span>
+                  <span class="resume-skill-badge">Android Studio</span>
+                </div>
+              </div>
+
+              <div class="resume-skills-group">
+                <div class="resume-skills-group-title">Web Technologies</div>
+                <div class="resume-skills-badges">
+                  <span class="resume-skill-badge">HTML</span>
+                  <span class="resume-skill-badge">CSS</span>
+                  <span class="resume-skill-badge">JavaScript</span>
+                  <span class="resume-skill-badge">Responsive Web Design</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="resume-paper-section">
+              <h2 class="resume-paper-section-title"><i data-feather="folder"></i> Projects</h2>
+              
+              <div class="resume-paper-entry">
+                <div class="resume-paper-entry-header">
+                  <span class="resume-paper-entry-title">AI-Based Grievance Resolution Portal (Mini Project – Team Lead)</span>
+                  <span class="resume-paper-entry-date">01/2023</span>
+                </div>
+                <ul class="resume-paper-entry-list">
+                  <li>Designed and developed an AI-driven grievance resolution system to manage and resolve user complaints efficiently.</li>
+                  <li>Implemented role-based access control for users and administrators.</li>
+                  <li>Gained practical experience in problem analysis, system architecture design, and team leadership.</li>
+                </ul>
+              </div>
+
+              <div class="resume-paper-entry">
+                <div class="resume-paper-entry-header">
+                  <span class="resume-paper-entry-title">AI-Powered Advance Laptop Assistant</span>
+                  <span class="resume-paper-entry-date">02/2026</span>
+                </div>
+                <div class="resume-paper-entry-sub">Tech Used: Python, SQL, Power BI, Excel</div>
+                <ul class="resume-paper-entry-list">
+                  <li>Developed an AI-powered desktop assistant capable of automating everyday tasks using voice commands and intelligent system interactions.</li>
+                  <li>Improved productivity by performing operations such as opening applications, web searching, system control, and task automation through a user-friendly interface.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="resume-paper-section" style="margin-bottom: 0;">
+              <h2 class="resume-paper-section-title"><i data-feather="award"></i> Certifications</h2>
+              <ul class="resume-paper-entry-list">
+                <li><strong>Cisco</strong> – Python Essentials 1 (<a href="#certifications">View Certificate</a>)</li>
+                <li><strong>Skill India Digital</strong> – AI Data Engineering Analyst (<a href="#certifications">View Certificate</a>)</li>
+                <li><strong>NPTEL</strong> – Programming, DSA using Python (<a href="#certifications">View Certificate</a>)</li>
+              </ul>
             </div>
           </div>
 
           <!-- Desktop Embedded PDF Viewer Card -->
-          <div class="pdf-viewer-card">
-            <object data="ROHAN SINGH RESUME.pdf?v=3#toolbar=0&navpanes=0" type="application/pdf">
-              <iframe src="ROHAN SINGH RESUME.pdf?v=3#toolbar=0" title="Rohan Singh Resume Viewer">
+          <div id="resumePdfTab" class="pdf-viewer-card" style="display: none;">
+            <object data="ROHAN%20SINGH%20RESUME.pdf#toolbar=0&navpanes=0" type="application/pdf">
+              <iframe src="ROHAN%20SINGH%20RESUME.pdf#toolbar=0" title="Rohan Singh Resume Viewer">
                 <div class="pdf-fallback">
                   <p class="pdf-fallback-text">Your browser cannot display embedded PDFs directly.</p>
-                  <a href="ROHAN SINGH RESUME.pdf?v=3" download="ROHAN_SINGH_RESUME.pdf"
+                  <a href="ROHAN%20SINGH%20RESUME.pdf" download="ROHAN_SINGH_RESUME.pdf"
                     class="btn btn-primary">Download Resume PDF</a>
                 </div>
               </iframe>

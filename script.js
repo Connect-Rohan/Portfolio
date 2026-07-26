@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalBody = document.getElementById('modalBody');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
 
-  window.openModal = function(fileUrl, type, title) {
+  window.openModal = function (fileUrl, type, title) {
     if (!modalOverlay || !modalBody || !modalTitle) return;
 
     modalTitle.textContent = title || 'Document Preview';
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
   };
 
-  window.closeModal = function() {
+  window.closeModal = function () {
     if (!modalOverlay) return;
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 6. Toast Notification Function
-  window.showToast = function(message) {
+  window.showToast = function (message) {
     const toast = document.getElementById('toast');
     if (!toast) return;
     toast.textContent = message;
@@ -156,5 +156,29 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       toast.classList.remove('show');
     }, 2500);
+  };
+
+  // 7. Resume Section View Switcher (Interactive View vs PDF Viewer)
+  window.switchResumeTab = function (tabName) {
+    const interactiveTab = document.getElementById('resumeInteractiveTab');
+    const pdfTab = document.getElementById('resumePdfTab');
+    const btnInteractive = document.getElementById('tabInteractiveBtn');
+    const btnPdf = document.getElementById('tabPdfBtn');
+
+    if (tabName === 'interactive') {
+      if (interactiveTab) interactiveTab.style.display = 'block';
+      if (pdfTab) pdfTab.style.display = 'none';
+      if (btnInteractive) btnInteractive.classList.add('active');
+      if (btnPdf) btnPdf.classList.remove('active');
+    } else if (tabName === 'pdf') {
+      if (interactiveTab) interactiveTab.style.display = 'none';
+      if (pdfTab) pdfTab.style.display = 'block';
+      if (btnInteractive) btnInteractive.classList.remove('active');
+      if (btnPdf) btnPdf.classList.add('active');
+    }
+
+    if (typeof feather !== 'undefined') {
+      feather.replace();
+    }
   };
 });
