@@ -68,11 +68,11 @@
           <div class="hero-content">
             <div class="hero-badge-tag">
               <span class="hero-badge-dot"></span>
-              Available for Software Engineering & AI Internships
+              Available for Internships & Jobs
             </div>
 
             <h1 class="hero-name">Rohan Singh</h1>
-            <p class="hero-headline">Third Year BTech Computer Science and Engineering Student</p>
+            <p class="hero-headline">Third Year B-Tech Computer Science and Engineering Student</p>
 
             <div class="hero-taglines">
               <span class="tagline-pill">Tech Intern at Balaji Udyog</span>
@@ -88,34 +88,69 @@
             </p>
 
             <div class="hero-actions">
-              <a href="ROHAN%20SINGH%20RESUME.pdf" download="ROHAN_SINGH_RESUME.pdf" class="btn btn-primary">
-                <i data-feather="download"></i> Download Resume
+              <a href="#resume" class="btn btn-primary">
+                View Resume
               </a>
-              <a href="#resume" class="btn btn-secondary">
-                <i data-feather="file-text"></i> View Resume
+              <a href="#contact" class="btn btn-secondary">
+                Contact Me
               </a>
-              <a href="https://in.linkedin.com/in/connect-rohan-singh" target="_blank" rel="noopener noreferrer"
-                class="btn btn-icon" aria-label="LinkedIn Profile">
-                <i data-feather="linkedin"></i>
-              </a>
-              <a href="https://github.com/Connect-Rohan" target="_blank" rel="noopener noreferrer" class="btn btn-icon"
-                aria-label="GitHub Profile">
-                <i data-feather="github"></i>
-              </a>
+              <div class="hero-socials">
+                <a href="https://github.com/Connect-Rohan" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-icon" aria-label="GitHub Profile">
+                  <i data-feather="github"></i>
+                </a>
+                <a href="https://in.linkedin.com/in/connect-rohan-singh" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-icon" aria-label="LinkedIn Profile">
+                  <i data-feather="linkedin"></i>
+                </a>
+                <a href="https://leetcode.com/u/0AVH5Urw9f/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-icon" aria-label="LeetCode Profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <path
+                      d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-7.228 0l-4.332 4.364a5.055 5.055 0 0 0 0 7.228l4.332 4.364a5.055 5.055 0 0 0 7.228 0l2.609-2.636c.514-.514.496-1.365-.039-1.9-.535-.535-1.386-.553-1.9-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="hero-media-wrapper">
+          <div class="hero-media-wrapper subtle-glow">
             <div class="hero-profile-card">
-              <!-- Decorative Small Badge placed elegantly in top-right corner -->
-              <a href="#certifications" class="floating-badge" title="Cisco Certified - Python Essentials 1">
-                <img src="Badge.png" alt="Python Essentials 1 Cisco Badge" class="floating-badge-img">
-                <div class="floating-badge-text">
-                  <span class="floating-badge-title">Python Essentials 1</span>
-                  <span class="floating-badge-sub">Issued by Cisco</span>
-                </div>
-              </a>
+              <div class="floating-badges-container">
+                <!-- Badge 1: Python -->
+                <a href="#certifications" class="floating-badge badge-top-left floating-anim"
+                  title="Cisco Certified - Python Essentials 1">
+                  <img src="Badge.png" alt="Python Essentials 1 Cisco Badge" class="floating-badge-img">
+                  <div class="floating-badge-text">
+                    <span class="floating-badge-title">Python Essentials 1</span>
+                    <span class="floating-badge-sub">Cisco</span>
+                  </div>
+                </a>
 
+                <!-- Badge 2: Internship -->
+                <a href="#experience" class="floating-badge badge-bottom-right floating-anim"
+                  style="animation-delay: 1.5s;">
+                  <div class="badge-icon-box" style="color: var(--primary);">
+                    <i data-feather="briefcase"></i>
+                  </div>
+                  <div class="floating-badge-text">
+                    <span class="floating-badge-title">Tech Intern</span>
+                    <span class="floating-badge-sub">Balaji Udyog</span>
+                  </div>
+                </a>
+
+                <!-- Badge 3: Education/Degree -->
+                <a href="#education" class="floating-badge badge-bottom-left floating-anim"
+                  style="animation-delay: 0.7s;">
+                  <div class="badge-icon-box" style="color: var(--accent-purple);">
+                    <i data-feather="book-open"></i>
+                  </div>
+                  <div class="floating-badge-text">
+                    <span class="floating-badge-title">BTech CSE</span>
+                    <span class="floating-badge-sub">3rd Year</span>
+                  </div>
+                </a>
+              </div>
               <img src="Profile.png" alt="Rohan Singh Profile Photo" class="hero-photo" loading="eager">
             </div>
           </div>
@@ -257,8 +292,45 @@
         </div>
 
         <div class="projects-grid">
-          <!-- Project Card 1 (Extensible for future additions) -->
-          <article class="project-card">
+          <!-- Project 1: AI Traffic Analyzer -->
+          <article class="project-card glass-effect">
+            <div>
+              <div class="project-top-row">
+                <div class="project-folder-icon">
+                  <i data-feather="video"></i>
+                </div>
+                <a href="https://github.com/Connect-Rohan/AI-Intelligent-Trafiic-Analyzer" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-icon"
+                  aria-label="View AI Intelligent Traffic Analyzer Code on GitHub">
+                  <i data-feather="github"></i>
+                </a>
+              </div>
+
+              <h3 class="project-title">AI Intelligent Traffic Analyzer</h3>
+              <p class="project-desc">
+                A sophisticated AI-powered traffic monitoring and dynamic signal control dashboard. Performs real-time
+                congestion analysis on video streams to optimize traffic light schedules and queuing.
+              </p>
+            </div>
+
+            <div>
+              <div class="project-tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Computer Vision</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/Connect-Rohan/AI-Intelligent-Trafiic-Analyzer" target="_blank"
+                  rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
+                  <i data-feather="github"></i> GitHub Repository
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: AI Advanced Laptop Assistant -->
+          <article class="project-card glass-effect">
             <div>
               <div class="project-top-row">
                 <div class="project-folder-icon">
@@ -272,9 +344,8 @@
 
               <h3 class="project-title">AI Advanced Laptop Assistant</h3>
               <p class="project-desc">
-                An intelligent desktop assistant designed to automate daily tasks using Artificial Intelligence. The
-                project focuses on improving productivity through voice commands task automation and smart system
-                interactions.
+                An intelligent desktop assistant designed to automate daily tasks using Artificial Intelligence. Focuses
+                on improving productivity through voice commands, task automation, and smart interactions.
               </p>
             </div>
 
@@ -406,10 +477,62 @@
 
         <div class="certifications-grid">
           <!-- Cert 1 -->
-          <div class="cert-card">
+          <div class="cert-card glass-effect">
             <div class="cert-header">
               <div class="pdf-icon-box">
-                <i data-feather="file"></i>
+                <i data-feather="award"></i>
+              </div>
+              <div>
+                <h3 class="cert-title">NASSCOM EDA</h3>
+                <p class="cert-org">Issued by NASSCOM</p>
+              </div>
+            </div>
+            <button onclick="openModal('Certificate/NASSCOM EDA.pdf', 'pdf', 'NASSCOM EDA')" class="btn btn-secondary"
+              style="width: 100%;">
+              <i data-feather="eye"></i> View Certificate
+            </button>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card glass-effect">
+            <div class="cert-header">
+              <div class="pdf-icon-box">
+                <i data-feather="award"></i>
+              </div>
+              <div>
+                <h3 class="cert-title">IBM AI + Sustainability</h3>
+                <p class="cert-org">Issued by IBM</p>
+              </div>
+            </div>
+            <button onclick="openModal('Certificate/IBM AI-Sustainability.pdf', 'pdf', 'IBM AI + Sustainability')"
+              class="btn btn-secondary" style="width: 100%;">
+              <i data-feather="eye"></i> View Certificate
+            </button>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card glass-effect">
+            <div class="cert-header">
+              <div class="pdf-icon-box">
+                <i data-feather="award"></i>
+              </div>
+              <div>
+                <h3 class="cert-title">AI - Data Engineering Analyst</h3>
+                <p class="cert-org">Issued by Skill India Digital</p>
+              </div>
+            </div>
+            <button
+              onclick="openModal('Certificate/Al - Data Engineering Analyst.pdf', 'pdf', 'AI Data Engineering Analyst - Skill India Digital')"
+              class="btn btn-secondary" style="width: 100%;">
+              <i data-feather="eye"></i> View Certificate
+            </button>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="cert-card glass-effect">
+            <div class="cert-header">
+              <div class="pdf-icon-box">
+                <i data-feather="award"></i>
               </div>
               <div>
                 <h3 class="cert-title">Python Essentials 1</h3>
@@ -422,32 +545,14 @@
             </button>
           </div>
 
-          <!-- Cert 2 -->
-          <div class="cert-card">
+          <!-- Cert 5 -->
+          <div class="cert-card glass-effect">
             <div class="cert-header">
               <div class="pdf-icon-box">
-                <i data-feather="file"></i>
+                <i data-feather="award"></i>
               </div>
               <div>
-                <h3 class="cert-title">Skill India Digital AI Data Engineering Analyst</h3>
-                <p class="cert-org">Issued by Skill India Digital</p>
-              </div>
-            </div>
-            <button
-              onclick="openModal('Certificate/Al - Data Engineering Analyst.pdf', 'pdf', 'AI Data Engineering Analyst - Skill India Digital')"
-              class="btn btn-secondary" style="width: 100%;">
-              <i data-feather="eye"></i> View Certificate
-            </button>
-          </div>
-
-          <!-- Cert 3 -->
-          <div class="cert-card">
-            <div class="cert-header">
-              <div class="pdf-icon-box">
-                <i data-feather="file"></i>
-              </div>
-              <div>
-                <h3 class="cert-title">Programming Data Structures and Algorithms Using Python</h3>
+                <h3 class="cert-title">Programming, DSA using Python</h3>
                 <p class="cert-org">Issued by NPTEL SWAYAM IIT Madras</p>
               </div>
             </div>
@@ -472,169 +577,19 @@
         </div>
 
         <div class="resume-container">
+          <div class="resume-preview-wrapper"
+            style="margin-bottom: 2.5rem; width: 100%; max-width: 800px; transition: transform 0.3s ease;">
+            <img src="Resume-Rohan-image.jpg" alt="Rohan Singh Resume Preview"
+              style="width: 100%; object-fit: contain; border: 1px solid var(--border-light); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+          </div>
+
           <div class="resume-actions-header">
-            <a href="ROHAN%20SINGH%20RESUME.pdf" download="ROHAN_SINGH_RESUME.pdf" class="btn btn-primary">
-              <i data-feather="download"></i> Download Resume PDF
+            <a href="Resume-Rohan.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <i data-feather="external-link"></i> View Full Resume
             </a>
-            <a href="ROHAN%20SINGH%20RESUME.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <i data-feather="external-link"></i> Open PDF in New Tab
+            <a href="Resume-Rohan.pdf" download="ROHAN_SINGH_RESUME.pdf" class="btn btn-primary">
+              <i data-feather="download"></i> Download Resume
             </a>
-          </div>
-
-          <!-- View Switcher Tabs -->
-          <div class="resume-tab-switcher">
-            <button class="resume-tab-btn active" id="tabInteractiveBtn" onclick="switchResumeTab('interactive')">
-              <i data-feather="layout"></i> Interactive View
-            </button>
-            <button class="resume-tab-btn" id="tabPdfBtn" onclick="switchResumeTab('pdf')">
-              <i data-feather="file-text"></i> PDF Viewer
-            </button>
-          </div>
-
-          <!-- Interactive Resume Paper Card (Always visible & crisp on all screens/browsers) -->
-          <div id="resumeInteractiveTab" class="resume-paper-card">
-            <!-- Header -->
-            <div class="resume-paper-header">
-              <h1 class="resume-paper-name">ROHAN SINGH</h1>
-              <p class="resume-paper-role">Computer Science Engineering Student | Aspiring Software Engineer</p>
-              <div class="resume-paper-meta">
-                <span class="resume-paper-meta-item"><i data-feather="phone"></i> +91 9821962437</span>
-                <span class="resume-paper-meta-item"><i data-feather="mail"></i> rohan.singh01006@gmail.com</span>
-                <span class="resume-paper-meta-item"><i data-feather="map-pin"></i> Greater Noida, U.P</span>
-                <span class="resume-paper-meta-item">
-                  <i data-feather="linkedin"></i> <a href="https://in.linkedin.com/in/connect-rohan-singh" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-                </span>
-                <span class="resume-paper-meta-item">
-                  <i data-feather="github"></i> <a href="https://github.com/Connect-Rohan" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-                </span>
-              </div>
-            </div>
-
-            <!-- Professional Summary -->
-            <div class="resume-paper-section">
-              <h2 class="resume-paper-section-title"><i data-feather="user"></i> Summary</h2>
-              <p class="resume-paper-text">
-                Computer Science and Engineering student with a strong foundation in software development, programming, and core computer science concepts. Passionate about Artificial Intelligence and Software Engineering, seeking opportunities to apply technical skills and contribute to innovative IT solutions.
-              </p>
-            </div>
-
-            <!-- Education -->
-            <div class="resume-paper-section">
-              <h2 class="resume-paper-section-title"><i data-feather="book-open"></i> Education</h2>
-              
-              <div class="resume-paper-entry">
-                <div class="resume-paper-entry-header">
-                  <span class="resume-paper-entry-title">Bachelor of Technology (BTech) in Computer Science & Engineering</span>
-                  <span class="resume-paper-entry-date">2024 - Present</span>
-                </div>
-                <div class="resume-paper-entry-sub">Greater Noida Institute of Technology (GNIOT) • Greater Noida, U.P</div>
-              </div>
-
-              <div class="resume-paper-entry">
-                <div class="resume-paper-entry-header">
-                  <span class="resume-paper-entry-title">Secondary School (Class XII)</span>
-                  <span class="resume-paper-entry-date">04/2023 - 04/2024</span>
-                </div>
-                <div class="resume-paper-entry-sub">CBSE Board</div>
-              </div>
-            </div>
-
-            <!-- Technical Skills -->
-            <div class="resume-paper-section">
-              <h2 class="resume-paper-section-title"><i data-feather="code"></i> Skills</h2>
-              
-              <div class="resume-skills-group">
-                <div class="resume-skills-group-title">Programming Languages</div>
-                <div class="resume-skills-badges">
-                  <span class="resume-skill-badge">Python</span>
-                  <span class="resume-skill-badge">C</span>
-                  <span class="resume-skill-badge">C++</span>
-                  <span class="resume-skill-badge">Java</span>
-                </div>
-              </div>
-
-              <div class="resume-skills-group">
-                <div class="resume-skills-group-title">Core CS Concepts</div>
-                <div class="resume-skills-badges">
-                  <span class="resume-skill-badge">Data Structures & Algorithms (DSA)</span>
-                  <span class="resume-skill-badge">Object-Oriented Programming (OOP)</span>
-                  <span class="resume-skill-badge">Artificial Intelligence & Machine Learning</span>
-                  <span class="resume-skill-badge">Data Science</span>
-                </div>
-              </div>
-
-              <div class="resume-skills-group">
-                <div class="resume-skills-group-title">Tools & Platforms</div>
-                <div class="resume-skills-badges">
-                  <span class="resume-skill-badge">Git & GitHub</span>
-                  <span class="resume-skill-badge">Visual Studio Code</span>
-                  <span class="resume-skill-badge">MS Excel</span>
-                  <span class="resume-skill-badge">Android Studio</span>
-                </div>
-              </div>
-
-              <div class="resume-skills-group">
-                <div class="resume-skills-group-title">Web Technologies</div>
-                <div class="resume-skills-badges">
-                  <span class="resume-skill-badge">HTML</span>
-                  <span class="resume-skill-badge">CSS</span>
-                  <span class="resume-skill-badge">JavaScript</span>
-                  <span class="resume-skill-badge">Responsive Web Design</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projects -->
-            <div class="resume-paper-section">
-              <h2 class="resume-paper-section-title"><i data-feather="folder"></i> Projects</h2>
-              
-              <div class="resume-paper-entry">
-                <div class="resume-paper-entry-header">
-                  <span class="resume-paper-entry-title">AI-Based Grievance Resolution Portal (Mini Project – Team Lead)</span>
-                  <span class="resume-paper-entry-date">01/2023</span>
-                </div>
-                <ul class="resume-paper-entry-list">
-                  <li>Designed and developed an AI-driven grievance resolution system to manage and resolve user complaints efficiently.</li>
-                  <li>Implemented role-based access control for users and administrators.</li>
-                  <li>Gained practical experience in problem analysis, system architecture design, and team leadership.</li>
-                </ul>
-              </div>
-
-              <div class="resume-paper-entry">
-                <div class="resume-paper-entry-header">
-                  <span class="resume-paper-entry-title">AI-Powered Advance Laptop Assistant</span>
-                  <span class="resume-paper-entry-date">02/2026</span>
-                </div>
-                <div class="resume-paper-entry-sub">Tech Used: Python, SQL, Power BI, Excel</div>
-                <ul class="resume-paper-entry-list">
-                  <li>Developed an AI-powered desktop assistant capable of automating everyday tasks using voice commands and intelligent system interactions.</li>
-                  <li>Improved productivity by performing operations such as opening applications, web searching, system control, and task automation through a user-friendly interface.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="resume-paper-section" style="margin-bottom: 0;">
-              <h2 class="resume-paper-section-title"><i data-feather="award"></i> Certifications</h2>
-              <ul class="resume-paper-entry-list">
-                <li><strong>Cisco</strong> – Python Essentials 1 (<a href="#certifications">View Certificate</a>)</li>
-                <li><strong>Skill India Digital</strong> – AI Data Engineering Analyst (<a href="#certifications">View Certificate</a>)</li>
-                <li><strong>NPTEL</strong> – Programming, DSA using Python (<a href="#certifications">View Certificate</a>)</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Desktop Embedded PDF Viewer Card -->
-          <div id="resumePdfTab" class="pdf-viewer-card" style="display: none;">
-            <object data="ROHAN%20SINGH%20RESUME.pdf#toolbar=0&navpanes=0" type="application/pdf">
-              <iframe src="ROHAN%20SINGH%20RESUME.pdf#toolbar=0" title="Rohan Singh Resume Viewer">
-                <div class="pdf-fallback">
-                  <p class="pdf-fallback-text">Your browser cannot display embedded PDFs directly.</p>
-                  <a href="ROHAN%20SINGH%20RESUME.pdf" download="ROHAN_SINGH_RESUME.pdf"
-                    class="btn btn-primary">Download Resume PDF</a>
-                </div>
-              </iframe>
-            </object>
           </div>
         </div>
       </div>
@@ -687,6 +642,19 @@
             </div>
             <span class="contact-label">GitHub</span>
             <span class="contact-val">Connect-Rohan</span>
+          </a>
+
+          <!-- LeetCode Card -->
+          <a href="https://leetcode.com/u/0AVH5Urw9f/" target="_blank" rel="noopener noreferrer" class="contact-card"
+            title="Visit LeetCode Profile">
+            <div class="contact-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path
+                  d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-7.228 0l-4.332 4.364a5.055 5.055 0 0 0 0 7.228l4.332 4.364a5.055 5.055 0 0 0 7.228 0l2.609-2.636c.514-.514.496-1.365-.039-1.9-.535-.535-1.386-.553-1.9-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z" />
+              </svg>
+            </div>
+            <span class="contact-label">LeetCode</span>
+            <span class="contact-val">0AVH5Urw9f</span>
           </a>
         </div>
       </div>

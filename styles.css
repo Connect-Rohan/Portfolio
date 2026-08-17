@@ -15,45 +15,92 @@
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Color Palette */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
+  --bg-primary: #fcfcfd;
+  --bg-secondary: #f3f4f6;
   --bg-card: #ffffff;
   --bg-pill: #f1f5f9;
-  
-  --primary: #0f4c81;        /* Deep Blue primary accent */
-  --primary-hover: #0b375e;
+
+  --primary: #3b82f6;
+  /* Subtle modern blue */
+  --primary-hover: #2563eb;
   --primary-light: #eff6ff;
   --primary-border: #bfdbfe;
-  
-  --text-main: #0f172a;       /* Dark slate primary text */
-  --text-muted: #475569;      /* Muted text */
-  --text-subtle: #64748b;     /* Secondary detail text */
 
-  --border-light: #e2e8f0;
-  --border-card: #e2e8f0;
+  /* Additional Accents */
+  --accent-purple: #8b5cf6;
+  --accent-cyan: #06b6d4;
+  --accent-green: #10b981;
+  --accent-orange: #f97316;
+  --accent-pink: #ec4899;
+
+  --text-main: #111827;
+  /* Dark slate */
+  --text-muted: #4b5563;
+  --text-subtle: #6b7280;
+
+  --border-light: rgba(226, 232, 240, 0.8);
+  --border-card: rgba(226, 232, 240, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.4);
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
   --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
-  --shadow-lg: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
-  --shadow-hover: 0 14px 30px -4px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 12px 30px -4px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+  --shadow-hover: 0 20px 40px -4px rgba(15, 23, 42, 0.12), 0 10px 15px -4px rgba(15, 23, 42, 0.05);
+  --glow-primary: 0 0 20px rgba(37, 99, 235, 0.15);
 
   /* Layout & Spacing */
   --container-max: 1140px;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
+  --radius-xl: 24px;
   --radius-full: 9999px;
-  
+
   --header-height: 76px;
   --transition-fast: 0.15s ease;
-  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   1.5 Glassmorphism & Utilities
+   -------------------------------------------------------------------------- */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.floating-anim {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.subtle-gradient-bg {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
 }
 
 /* --------------------------------------------------------------------------
    2. CSS Reset & Base Defaults
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -81,13 +128,15 @@ a {
   transition: color var(--transition-fast);
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-button, input {
+button,
+input {
   font-family: inherit;
   font-size: inherit;
 }
@@ -239,7 +288,7 @@ section {
 .hero-section {
   padding-top: calc(var(--header-height) + 3.5rem);
   padding-bottom: 5.5rem;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  background: radial-gradient(circle at 75% 25%, rgba(59, 130, 246, 0.08) 0%, rgba(255, 255, 255, 0) 60%), linear-gradient(180deg, #fcfcfd 0%, #f3f4f6 100%);
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -329,6 +378,11 @@ section {
   align-items: center;
 }
 
+.hero-socials {
+  display: flex;
+  gap: 0.6rem;
+}
+
 /* Button Variants */
 .btn {
   display: inline-flex;
@@ -410,48 +464,113 @@ section {
 
 .hero-profile-card {
   position: relative;
-  background-color: #ffffff;
-  padding: 0.85rem;
+  background-color: transparent;
+  padding: 0;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border-card);
-  max-width: 380px;
+  border: none;
+  box-shadow: none;
+  max-width: 340px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .hero-photo {
   width: 100%;
-  height: 420px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: top center;
-  border-radius: calc(var(--radius-lg) - 4px);
-  background-color: #f1f5f9;
+  border-radius: var(--radius-lg);
+  background-color: var(--primary-light);
+  box-shadow: var(--shadow-lg), 0 0 35px rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 1;
 }
 
-/* Decorative Python Badge floating in hero corner */
+.subtle-glow {
+  position: relative;
+}
+
+.subtle-glow::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: 0;
+  border-radius: 50%;
+}
+
+/* Modern Floating Badges System */
+.floating-badges-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
 .floating-badge {
   position: absolute;
-  top: -15px;
-  right: -15px;
-  background: #ffffff;
-  border: 1px solid var(--border-light);
-  padding: 0.5rem 0.75rem;
+  pointer-events: auto;
+  padding: 0.6rem 0.85rem;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  z-index: 10;
-  transition: transform var(--transition-normal);
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .floating-badge:hover {
-  transform: translateY(-3px) scale(1.03);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-border);
+}
+
+.badge-top-left {
+  top: 12%;
+  left: -40px;
+}
+
+.badge-bottom-right {
+  bottom: 12%;
+  right: -30px;
+}
+
+.badge-bottom-left {
+  bottom: 8%;
+  left: -30px;
+}
+
+.badge-icon-box {
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.badge-icon-box i {
+  width: 16px;
+  height: 16px;
 }
 
 .floating-badge-img {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
 }
 
@@ -470,6 +589,7 @@ section {
 .floating-badge-sub {
   font-size: 0.6875rem;
   color: var(--text-subtle);
+  font-weight: 500;
 }
 
 /* --------------------------------------------------------------------------
@@ -1437,6 +1557,7 @@ section {
    16. Responsive Media Queries & Mobile Optimizations
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+
   .hero-grid,
   .about-grid {
     grid-template-columns: 1fr;
@@ -1461,7 +1582,9 @@ section {
   }
 
   .hero-media-wrapper {
+    order: -1;
     margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1489,6 +1612,11 @@ section {
 
   .hero-headline {
     font-size: 1.15rem;
+  }
+
+  .hero-profile-card {
+    max-width: 250px;
+    margin-top: 0.5rem;
   }
 
   /* Mobile Nav Drawer Glassmorphism */
