@@ -458,6 +458,9 @@ section {
   background-color: #ffffff;
   color: var(--text-muted);
   box-shadow: var(--shadow-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-icon:hover {
@@ -465,6 +468,18 @@ section {
   border-color: var(--primary-border);
   background-color: var(--primary-light);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-icon:active {
+  transform: scale(0.96);
+}
+
+/* Hero socials row — icons */
+.hero-socials .btn-icon svg,
+.hero-socials .btn-icon i {
+  display: block;
+  flex-shrink: 0;
 }
 
 /* Hero Media & Floating Cisco Badge */
@@ -628,18 +643,99 @@ section {
 .linkedin-badge-wrapper {
   background-color: #ffffff;
   border-radius: var(--radius-lg);
-  padding: 1.75rem;
+  padding: 1.5rem;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-card);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 180px;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  /* Contain the LinkedIn widget */
+  min-height: auto;
+}
+
+/* Custom LinkedIn Card */
+.li-custom-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.li-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.li-avatar-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #e8f4fb;
+  border: 1px solid #c8e3f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.li-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.li-card-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.li-card-title {
+  font-size: 0.825rem;
+  color: var(--text-subtle);
+  font-weight: 500;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.li-card-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 0.25rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.li-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background-color: #0077b5;
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  align-self: flex-start;
+  white-space: nowrap;
+}
+
+.li-card-btn:hover {
+  background-color: #005f92;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 .badge-wrapper-title {
@@ -1769,6 +1865,67 @@ section {
 
   .nav-menu.active {
     clip-path: circle(140% at 100% 0);
+  }
+
+  /* Mobile social icons — larger touch targets */
+  .hero-socials {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-socials .btn-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    color: var(--text-muted);
+    transition: all var(--transition-normal);
+  }
+
+  .hero-socials .btn-icon:hover {
+    border-color: var(--primary-border);
+    background: var(--primary-light);
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero-socials .btn-icon:active {
+    transform: scale(0.94);
+  }
+
+  .hero-socials .btn-icon i {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero-socials .btn-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Mobile LinkedIn card */
+  .linkedin-badge-wrapper {
+    min-height: auto;
+    padding: 1.25rem;
+  }
+
+  .li-card-name {
+    font-size: 0.975rem;
+  }
+
+  .li-card-title {
+    font-size: 0.78rem;
+  }
+
+  .li-card-desc {
+    font-size: 0.82rem;
   }
 
   /* Contact grid */
